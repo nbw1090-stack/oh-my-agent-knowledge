@@ -1,0 +1,185 @@
+# ============================================================
+# 产品全景 · 数据文件
+# kind: coding-agent(编码智能体) / platform(开发平台) / personal(个人助理) / browser(浏览器agent)
+# stars 由脚本自动更新；url 留空的条目表示待补充官网
+# ============================================================
+
+# ---------- Coding Agents ----------
+
+- name: Claude Code
+  kind: coding-agent
+  url: https://www.anthropic.com/claude-code
+  company: Anthropic
+  tags: [cli, terminal, mcp, skills, plugins]
+  stars: 0
+  comment: 终端优先的编码智能体标杆；skills/plugins/MCP 扩展体系与 sub-agent 机制最完整
+  added: 2026-11-23
+
+- name: Codex
+  kind: coding-agent
+  url: https://developers.openai.com/codex
+  company: OpenAI
+  tags: [cli, ide, cloud]
+  stars: 0
+  comment: OpenAI 编码智能体（CLI + IDE + 云端），沙箱执行与代码审查场景强
+  added: 2026-11-23
+
+- name: Gemini CLI
+  kind: coding-agent
+  url: https://github.com/google-gemini/gemini-cli
+  company: Google
+  tags: [cli, open-source, gemini]
+  stars: 109016
+  comment: Google 官方开源终端 agent，免费额度大，Gemini 生态入口
+  added: 2026-11-23
+
+- name: Cursor
+  kind: coding-agent
+  url: https://cursor.com
+  tags: [ide, composer, rules]
+  stars: 0
+  comment: AI 原生 IDE，Agent 模式 + Rules 体系定义了 IDE agent 交互范式
+  added: 2026-11-23
+
+- name: Aider
+  kind: coding-agent
+  url: https://github.com/Aider-AI/aider
+  tags: [cli, open-source, git]
+  stars: 50224
+  comment: 老牌开源终端结对编程 agent，git 工作流集成最丝滑
+  added: 2026-11-23
+
+- name: OpenCode
+  kind: coding-agent
+  url: https://github.com/sst/opencode
+  tags: [cli, tui, open-source, provider-agnostic]
+  stars: 228720
+  comment: 开源 TUI 编码 agent，模型/Provider 完全中立，可接任意后端
+  added: 2026-11-23
+
+- name: Devin
+  kind: coding-agent
+  url: https://devin.ai
+  company: Cognition
+  tags: [autonomous, cloud, async]
+  stars: 0
+  comment: 「全自主软件工程师」产品化代表，异步任务+云端工作区模式
+  added: 2026-11-23
+
+- name: Goose
+  kind: coding-agent
+  url: https://github.com/block/goose
+  company: Block
+  tags: [open-source, cli, mcp, desktop]
+  stars: 56891
+  comment: Block 开源的本地编码 agent，MCP 原生扩展
+  added: 2026-11-23
+
+- name: pi
+  kind: coding-agent
+  url: https://github.com/badlogic/pi-mono
+  tags: [open-source, minimal, cli, tui]
+  stars: 123457
+  comment: 极简主义编码 agent（pi-mono），小而美的会话/扩展模型，适合魔改学习
+  added: 2026-11-23
+
+- name: dsh
+  kind: coding-agent
+  url: ""
+  tags: [coding-agent]
+  stars: 0
+  comment: 待补充：请补充官网/GitHub 链接与一句话点评（占位条目）
+  added: 2026-11-23
+
+# ---------- 开发平台 ----------
+
+- name: Dify
+  kind: platform
+  url: https://github.com/langgenius/dify
+  region: cn
+  tags: [low-code, workflow, rag, self-host]
+  stars: 161733
+  comment: 开源 LLM 应用开发平台，可视化工作流 + 知识库，国内自托管最流行
+  added: 2026-11-23
+
+- name: Coze（扣子）
+  kind: platform
+  url: https://www.coze.cn
+  company: 字节跳动
+  region: cn
+  tags: [low-code, bot-store, plugins]
+  stars: 0
+  comment: 字节 agent 搭建平台，插件商店 + Bot 商店生态，国内/海外双版本
+  added: 2026-11-23
+
+- name: n8n
+  kind: platform
+  url: https://github.com/n8n-io/n8n
+  tags: [automation, workflow, nodes, self-host]
+  stars: 211897
+  comment: 工作流自动化平台，AI agent 节点生态成熟，「自动化+agent」结合首选
+  added: 2026-11-23
+
+- name: Agentforce
+  kind: platform
+  url: https://www.salesforce.com/agentforce/
+  company: Salesforce
+  tags: [enterprise, crm, atlas-reasoning]
+  stars: 0
+  comment: Salesforce 企业 agent 平台，CRM 数据 + Atlas 推理引擎，企业级落地风向标
+  added: 2026-11-23
+
+- name: Copilot Studio
+  kind: platform
+  url: https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/
+  company: Microsoft
+  tags: [enterprise, low-code, m365]
+  stars: 0
+  comment: 微软低代码 agent 构建平台，与 M365 生态打通
+  added: 2026-11-23
+
+- name: Manus
+  kind: platform
+  url: https://manus.im
+  region: cn
+  tags: [autonomous, general-agent, cloud]
+  stars: 0
+  comment: 通用自主 agent 产品化代表（2025 现象级），云端虚拟机沙箱执行任意任务
+  added: 2026-11-23
+
+# ---------- Personal / Browser Agents ----------
+
+- name: Project Astra
+  kind: personal
+  url: https://deepmind.google/models/project-astra
+  company: Google DeepMind
+  tags: [ambient, proactive, multimodal, universal]
+  stars: 0
+  comment: Google 通用 agent 愿景原型：实时多模态、主动响应、常伴式助理，Gemini 生态路线图核心
+  added: 2026-11-23
+
+- name: OpenAI Dots
+  kind: personal
+  url: ""
+  company: OpenAI
+  tags: [ambient, always-on, cloud-compute]
+  stars: 0
+  comment: OpenAI 常驻式个人助理（每个 agent 实例配独立云计算机），Astra 竞品（链接待补）
+  added: 2026-11-23
+
+- name: Perplexity Comet
+  kind: browser
+  url: https://www.perplexity.ai/comet
+  tags: [browser, assistant, search]
+  stars: 0
+  comment: Perplexity 浏览器 agent，日常浏览/比价/表单类任务的 C 端代表
+  added: 2026-11-23
+
+- name: Operator
+  kind: browser
+  url: https://openai.com/index/introducing-operator/
+  company: OpenAI
+  tags: [cua, browser, autonomous]
+  stars: 0
+  comment: OpenAI Computer-Using Agent 产品（CUA 模型），浏览器代操作范式开创者之一
+  added: 2026-11-23

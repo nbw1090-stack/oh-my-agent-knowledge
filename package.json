@@ -1,0 +1,26 @@
+{
+  "name": "oh-my-agent-knowledge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent 技术知识库：基础理论 · 前沿方向 · 生态版图 · 企业实践 · 每周动态",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "check:links": "node scripts/check-links.mjs",
+    "sync:stars": "node scripts/sync-stars.mjs",
+    "fetch:feeds": "node scripts/fetch-feeds.mjs"
+  },
+  "devDependencies": {
+    "rss-parser": "^3.13.0",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

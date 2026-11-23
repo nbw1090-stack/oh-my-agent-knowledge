@@ -1,0 +1,219 @@
+# ============================================================
+# 框架全景 · 数据文件
+# 字段规范见 docs/guide/contributing.md
+# - name / url / comment 必填；tags 建议从既有标签里复用
+# - stars 由 scripts/sync-stars.mjs 每周自动更新，手填 0 即可
+# - status: active(默认可省) / superseded(被替代) / archived(停止维护)
+# ============================================================
+
+# ---------- 主流编排框架 ----------
+
+- name: LangGraph
+  url: https://github.com/langchain-ai/langgraph
+  category: 编排框架
+  lang: [Python, JS/TS]
+  tags: [production, graph, stateful, durable, hitl]
+  stars: 45302
+  comment: 图结构编排的事实标准，细粒度状态控制、持久化检查点、human-in-the-loop，生产复杂工作流首选
+  added: 2026-11-23
+
+- name: LangChain
+  url: https://github.com/langchain-ai/langchain
+  category: 应用框架
+  lang: [Python, JS/TS]
+  tags: [ecosystem, chains, rag]
+  stars: 149989
+  comment: 最大的 LLM 应用生态，组件最全；复杂 agent 场景建议直接用其上层 LangGraph
+  added: 2026-11-23
+
+- name: CrewAI
+  url: https://github.com/crewAIInc/crewAI
+  category: 编排框架
+  lang: [Python]
+  tags: [multi-agent, roles, easy-start]
+  stars: 61195
+  comment: 角色化多智能体编排，上手最快；适合「团队分工」隐喻的多 agent 协作场景
+  added: 2026-11-23
+
+- name: Microsoft Agent Framework
+  url: https://github.com/microsoft/agent-framework
+  category: 编排框架
+  company: Microsoft
+  lang: [.NET, Python]
+  tags: [production, multi-agent, enterprise]
+  stars: 0
+  comment: AutoGen 与 Semantic Kernel 的官方继任者，微软系企业落地主推
+  added: 2026-11-23
+
+- name: AutoGen
+  url: https://github.com/microsoft/autogen
+  category: 编排框架
+  company: Microsoft
+  lang: [Python]
+  status: superseded
+  tags: [multi-agent, research]
+  stars: 61965
+  comment: 多智能体对话式协作开创者；已被 Microsoft Agent Framework 吸收，新项目不建议直接选用
+  added: 2026-11-23
+
+- name: OpenAI Agents SDK
+  url: https://github.com/openai/openai-agents-python
+  category: 轻量框架
+  company: OpenAI
+  lang: [Python, JS/TS]
+  tags: [lightweight, handoffs, guardrails, tracing]
+  stars: 30835
+  comment: Swarm 的继任者，极简抽象（agent/handoff/guardrail/session），深度绑定 OpenAI 生态与 tracing
+  added: 2026-11-23
+
+- name: OpenAI Swarm
+  url: https://github.com/openai/swarm
+  category: 轻量框架
+  company: OpenAI
+  lang: [Python]
+  status: archived
+  tags: [educational, multi-agent]
+  stars: 22156
+  comment: 多智能体 handoff 概念的教学级实现（官方定位 educational），已被 Agents SDK 取代
+  added: 2026-11-23
+
+- name: Semantic Kernel
+  url: https://github.com/microsoft/semantic-kernel
+  category: 应用框架
+  company: Microsoft
+  lang: [.NET, Python, Java]
+  tags: [enterprise, plugins, dotnet]
+  stars: 28794
+  comment: 微软老牌 SDK，企业 .NET 体系集成好；agent 能力正向 Agent Framework 迁移
+  added: 2026-11-23
+
+- name: LlamaIndex Workflows
+  url: https://github.com/run-llama/llama_index
+  category: 应用框架
+  tags: [rag, events, data]
+  lang: [Python, TS]
+  stars: 52990
+  comment: 数据/RAG 起家的框架，Workflows 提供事件驱动编排，检索密集型 agent 场景有优势
+  added: 2026-11-23
+
+- name: Google ADK
+  url: https://github.com/google/adk-python
+  category: 编排框架
+  company: Google
+  lang: [Python, Java]
+  tags: [multi-agent, vertex, gemini]
+  stars: 22320
+  comment: Google 官方 Agent Development Kit，多 agent 分层设计与 Vertex AI/Gemini 深度集成
+  added: 2026-11-23
+
+- name: PydanticAI
+  url: https://github.com/pydantic/pydantic-ai
+  category: 轻量框架
+  lang: [Python]
+  tags: [type-safe, lightweight, pydantic]
+  stars: 21349
+  comment: 以 Pydantic 类型安全为核心的 agent 框架，输出结构化校验体验最好
+  added: 2026-11-23
+
+- name: Mastra
+  url: https://github.com/mastra-io/mastra
+  category: 应用框架
+  lang: [TS]
+  tags: [typescript, fullstack, workflows]
+  stars: 0
+  comment: TS 全栈 agent 框架，前后端一体的全栈应用场景（含存储/RAG/Evals）表现好
+  added: 2026-11-23
+
+- name: smolagents
+  url: https://github.com/huggingface/smolagents
+  category: 轻量框架
+  company: Hugging Face
+  lang: [Python]
+  tags: [minimal, code-agent, open-source]
+  stars: 30499
+  comment: HF 出品的极简 agent 库，CodeAgent（直接写代码当 action）范式代表
+  added: 2026-11-23
+
+- name: Agno
+  url: https://github.com/agno-agi/agno
+  category: 轻量框架
+  lang: [Python]
+  tags: [performance, multi-agent, memory]
+  stars: 43267
+  comment: 主打高性能低开销的多 agent 框架（原 PhiData）
+  added: 2026-11-23
+
+- name: browser-use
+  url: https://github.com/browser-use/browser-use
+  category: 领域框架
+  lang: [Python]
+  tags: [browser, computer-use, automation]
+  stars: 121821
+  comment: 浏览器操作 agent 事实标准库，让 LLM 直接驱动真实浏览器完成任务
+  added: 2026-11-23
+
+# ---------- 多智能体研究型 ----------
+
+- name: MetaGPT
+  url: https://github.com/FoundationAgents/MetaGPT
+  category: 研究框架
+  region: cn
+  lang: [Python]
+  tags: [multi-agent, sop, research]
+  stars: 71426
+  comment: 「软件公司 SOP」隐喻的多智能体框架，论文与工程双线影响大
+  added: 2026-11-23
+
+- name: CAMEL
+  url: https://github.com/camel-ai/camel
+  category: 研究框架
+  lang: [Python]
+  tags: [multi-agent, research, society]
+  stars: 18053
+  comment: 角色扮演式多智能体交互研究框架，多智能体论文常用基座
+  added: 2026-11-23
+
+- name: AgentScope
+  url: https://github.com/agentscope-ai/agentscope
+  category: 研究框架
+  company: 阿里
+  region: cn
+  lang: [Python]
+  tags: [multi-agent, research, distributed]
+  stars: 36535
+  comment: 阿里开源的多智能体框架，消息驱动、分布式友好
+  added: 2026-11-23
+
+# ---------- 国内生态 ----------
+
+- name: Qwen-Agent
+  url: https://github.com/QwenLM/Qwen-Agent
+  category: 应用框架
+  company: 阿里通义
+  region: cn
+  lang: [Python]
+  tags: [qwen, tools, rag, cn]
+  stars: 17281
+  comment: 通义官方 agent 框架，与 Qwen 模型工具调用能力协同最好
+  added: 2026-11-23
+
+- name: AutoGLM
+  url: https://github.com/zai-org/AutoGLM
+  category: 应用框架
+  company: 智谱
+  region: cn
+  lang: [Python]
+  tags: [phone-use, cn, glm]
+  stars: 0
+  comment: 智谱推出的自主 agent 系列（含手机操作 AutoGLM-Ruguo），GLM 生态落地代表
+  added: 2026-11-23
+
+- name: LangManus
+  url: https://github.com/langmanussdk/langmanus
+  category: 应用框架
+  region: cn
+  lang: [Python]
+  tags: [deep-research, multi-agent, cn]
+  stars: 0
+  comment: 开源复刻 Manus 式深度研究/任务执行流的多智能体项目，中文社区活跃
+  added: 2026-11-23

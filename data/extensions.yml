@@ -1,0 +1,154 @@
+# ============================================================
+# 扩展生态（Skills / Plugins / Prompts / Rules / MCP / 模板）
+# kind: skill / plugin / mcp / prompt / rule / template
+# platform: 适用宿主（claude-code / codex / cursor / gemini-cli / dify 等）
+# ============================================================
+
+# ---------- Agent Skills ----------
+
+- name: anthropics/skills（官方）
+  kind: skill
+  url: https://github.com/anthropics/skills
+  company: Anthropic
+  platform: [claude-code, claude-api]
+  tags: [official, skill-md, reference]
+  stars: 199243
+  comment: Anthropic 官方 Agent Skills 仓库，SKILL.md 规范的标准参考实现
+  added: 2026-11-23
+
+- name: awesome-agent-skills
+  kind: skill
+  url: https://github.com/VoltAgent/awesome-agent-skills
+  platform: [claude-code, codex, gemini-cli, cursor]
+  tags: [collection, cross-platform, 1000plus]
+  stars: 37467
+  comment: 1000+ 跨平台 agent skills 合集（官方+社区），按场景分类
+  added: 2026-11-23
+
+- name: awesome-skills.com
+  kind: skill
+  url: https://awesome-skills.com
+  platform: [claude-code]
+  tags: [directory, curated]
+  stars: 0
+  comment: 157+ 精选 Claude Code skills/plugins 目录站，含文档处理/前端/测试等类别
+  added: 2026-11-23
+
+- name: ComposioHQ/awesome-claude-skills
+  kind: skill
+  url: https://github.com/ComposioHQ/awesome-claude-skills
+  tags: [collection, claude]
+  stars: 80114
+  comment: Claude Skills 精选列表，附 skills 结构说明（文件夹 + SKILL.md + 可选脚本）
+  added: 2026-11-23
+
+# ---------- Plugins / 市集 ----------
+
+- name: Tons of Skills
+  kind: plugin
+  url: https://tonsofskills.com
+  tags: [marketplace, open-source, model-neutral]
+  stars: 0
+  comment: 开源 skills/plugins/agents 市集，模型中立、Claude Code 原生验证
+  added: 2026-11-23
+
+- name: Claude Code Plugins（官方文档）
+  kind: plugin
+  url: https://docs.claude.com/en/docs/claude-code/plugins
+  company: Anthropic
+  tags: [official, docs, marketplace]
+  stars: 0
+  comment: 插件与 marketplace 机制官方文档：命令/skills/agents/hooks/MCP 的打包分发
+  added: 2026-11-23
+
+# ---------- MCP（工具扩展） ----------
+
+- name: modelcontextprotocol/servers
+  kind: mcp
+  url: https://github.com/modelcontextprotocol/servers
+  company: Anthropic
+  tags: [official, reference, servers]
+  stars: 92183
+  comment: MCP 官方参考服务器集（文件系统/Git/搜索等），学习 server 实现的第一站
+  added: 2026-11-23
+
+- name: punkpeye/awesome-mcp-servers
+  kind: mcp
+  url: https://github.com/punkpeye/awesome-mcp-servers
+  tags: [collection, directory]
+  stars: 98407
+  comment: 社区最大 MCP servers 精选列表，按类别组织
+  added: 2026-11-23
+
+- name: mcpservers.org
+  kind: mcp
+  url: https://mcpservers.org
+  tags: [directory, 9800plus]
+  stars: 0
+  comment: 9800+ MCP servers 目录站，带配置教程与工作流场景
+  added: 2026-11-23
+
+- name: mcp.so
+  kind: mcp
+  url: https://mcp.so
+  tags: [directory]
+  stars: 0
+  comment: 另一大 MCP server 聚合站，检索补充用
+  added: 2026-11-23
+
+# ---------- Rules / Prompts ----------
+
+- name: awesome-cursorrules
+  kind: rule
+  url: https://github.com/PatrickJS/awesome-cursorrules
+  platform: [cursor]
+  tags: [collection, mdc, project-rules]
+  stars: 41183
+  comment: Cursor rules 最全合集（.mdc Project Rules 时代的事实标准库）
+  added: 2026-11-23
+
+- name: system-prompts-and-models-of-ai-tools
+  kind: prompt
+  url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
+  tags: [leaked, production, study-material, 100kplus]
+  stars: 144825
+  comment: 28+ 主流 AI 编码工具（Cursor/Claude Code/Windsurf 等）的真实 system prompt 合集，研究生产级 agent 指令设计的最佳素材
+  added: 2026-11-23
+
+- name: LangChain Hub
+  kind: prompt
+  url: https://smith.langchain.com/hub
+  tags: [prompts, agents, sharing]
+  stars: 0
+  comment: LangChain 生态的 prompt/agent 配置分享中心
+  added: 2026-11-23
+
+# ---------- 工作流模板 ----------
+
+- name: Dify Marketplace
+  kind: template
+  url: https://marketplace.dify.ai
+  platform: [dify]
+  tags: [dsl, workflow, apps]
+  stars: 0
+  comment: Dify 官方模板市场，DSL 一键导入完整 agent 应用
+  added: 2026-11-23
+
+- name: n8n Workflow Templates
+  kind: template
+  url: https://n8n.io/workflows
+  platform: [n8n]
+  tags: [automation, community]
+  stars: 0
+  comment: n8n 官方工作流模板库，大量现成 AI agent 自动化案例
+  added: 2026-11-23
+
+- name: Coze 资产商店
+  kind: template
+  url: https://www.coze.cn/store
+  platform: [coze]
+  region: cn
+  tags: [bot, plugin, workflow]
+  stars: 0
+  comment: 扣子官方商店：Bot / 插件 / 工作流模板，国内生态最全
+  added: 2026-11-23

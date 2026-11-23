@@ -1,0 +1,52 @@
+# 每周保鲜：star 同步 + 死链校验 + RSS 聚合，以 PR 形式提交人工合并
+# 可选：在仓库 Settings → Secrets 添加 GITHUB_TOKEN 权限足够（默认即可）；
+# 若 API 限流，配置 secret 名 GITHUB_PAT 并在 env 中替换
+name: Weekly Refresh
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # 每周一 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Sync stars
+        run: npm run sync:stars
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch feeds (weekly inbox)
+        run: npm run fetch:feeds
+
+      - name: Check links (report only)
+        run: npm run check:links
+        continue-on-error: true
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore(data): weekly refresh (stars + rss inbox + link report)'
+          title: '🤖 每周保鲜：star 同步 + RSS 收件箱 + 死链报告'
+          body: |
+            自动化流水线产物，请人工审阅后合并：
+
+            - `data/*.yml` star 数更新
+            - `docs/digest/inbox/` 本周 RSS 收件箱（挑 3~5 条进周报后可删）
+            - `link-check-report.json` 死链报告（确认后再删条目）
+
+            详见 [贡献指南](docs/guide/contributing.md)。
+          branch: auto/weekly-refresh
+          delete-branch: true

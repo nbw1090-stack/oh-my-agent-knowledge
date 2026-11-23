@@ -1,0 +1,101 @@
+# ============================================================
+# 行业大事时间线 · 数据文件
+# 由 <Timeline /> 组件自动渲染；digest 周报里值得留档的事件同步录到这里
+# tags 用于方向过滤，如 multi-agent / protocols / commerce / coding / safety
+# ============================================================
+
+- date: "2026-11-15"
+  title: PayPal 全面接入 agentic commerce 标准
+  desc: 与 AP2/ACP 等标准打通，agent 代付从试点走向规模商用
+  url: https://newsroom.paypal-corp.com/
+  tags: [commerce]
+
+- date: "2026-08-20"
+  title: Salesforce 发布 Agentic Enterprise Index（2025-2026）
+  desc: 基于 Agentforce 平台真实用量数据的企业 agent 落地分析报告
+  url: https://www.salesforce.com/news/stories/agentic-enterprise-index-insights-2026/
+  tags: [enterprise]
+
+- date: "2026-01-15"
+  title: Google 发布面向零售商的 agentic commerce 工具
+  desc: 基于 AP2 与 agent 支付基础设施的商家侧工具链
+  url: https://blog.google/products/ads-commerce/agentic-commerce-ai-tools-protocol-retailers-platforms/
+  tags: [commerce]
+
+- date: "2025-12-09"
+  title: OWASP 发布 Agentic AI Top 10（2026 版）
+  desc: 首个全球同行评审的 agentic 应用安全风险清单
+  url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+  tags: [safety]
+
+- date: "2025-10-16"
+  title: Anthropic 发布 Agent Skills 规范
+  desc: SKILL.md：模块化能力包（指令+脚本+资源）成为跨工具共享的开放格式
+  url: https://www.anthropic.com/news/skills
+  tags: [skills, coding]
+
+- date: "2025-09-16"
+  title: Google Cloud 联合支付巨头发布 AP2 协议
+  desc: Agent Payments Protocol：agent 代付的授权与问责框架
+  url: https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol
+  tags: [protocols, commerce]
+
+- date: "2025-07-23"
+  title: AGNTCY 项目加入 Linux 基金会
+  desc: Cisco 开源的「Internet of Agents」基础设施（发现/信任/编排），75+ 组织参与
+  url: https://www.linuxfoundation.org/press/linux-foundation-welcomes-the-agntcy-project-to-standardize-open-multi-agent-system-infrastructure-and-break-down-ai-agent-silos
+  tags: [protocols, multi-agent]
+
+- date: "2025-06-10"
+  title: A2A 协议捐赠给 Linux 基金会
+  desc: Google 发起的 agent 间互操作标准转为中立治理
+  url: https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interinteroperability/
+  tags: [protocols, multi-agent]
+
+- date: "2025-04-09"
+  title: Google 发布 A2A（Agent2Agent）协议
+  desc: 跨厂商 agent 安全发现、通信与协作的开放标准
+  url: https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/
+  tags: [protocols, multi-agent]
+
+- date: "2025-03-11"
+  title: Cisco 开源 AGNTCY
+  desc: 面向多 agent 互联网的开源基础设施集合
+  url: https://github.com/agntcy
+  tags: [protocols, multi-agent]
+
+- date: "2025-01-23"
+  title: OpenAI 发布 Operator（CUA）
+  desc: Computer-Using Agent 产品化，浏览器代操作范式开启
+  url: https://openai.com/index/introducing-operator/
+  tags: [computer-use, product]
+
+- date: "2024-11-25"
+  title: Anthropic 发布 MCP（Model Context Protocol）
+  desc: 连接 AI 与外部工具/数据源的开放标准，后成为事实标准（9800+ servers）
+  url: https://www.anthropic.com/news/model-context-protocol
+  tags: [protocols, tool-use]
+
+- date: "2024-04-15"
+  title: OSWorld 基准发布
+  desc: 真实操作系统环境的 GUI agent 标准评测
+  url: https://arxiv.org/abs/2404.07972
+  tags: [eval, computer-use]
+
+- date: "2023-10-10"
+  title: SWE-bench 发布
+  desc: 真实 GitHub issue 的编码 agent 基准，成为行业标尺
+  url: https://arxiv.org/abs/2310.06770
+  tags: [eval, coding]
+
+- date: "2023-06-23"
+  title: Lilian Weng 发表《LLM Powered Autonomous Agents》
+  desc: Planning+Memory+Tool Use 理论框架确立，agent 领域引用最高的综述长文
+  url: https://lilianweng.github.io/posts/2023-06-23-agent/
+  tags: [foundations]
+
+- date: "2022-10-06"
+  title: ReAct 论文发布
+  desc: 推理与行动交替的 agent loop 原型确立
+  url: https://arxiv.org/abs/2210.03629
+  tags: [foundations, reasoning]

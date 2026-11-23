@@ -1,0 +1,226 @@
+# ============================================================
+# 企业技术发文源 · 数据文件
+# region: us / cn；quality: A(必读) / B(精选) / C(跟踪)
+# has-rss: true 的源会被 scripts/fetch-feeds.mjs 每周自动聚合进 digest
+# must-read: 该源最值得读的 1~3 篇（建库时人工挑选）
+# ============================================================
+
+# ---------- 海外 · 模型厂商 ----------
+
+- name: Anthropic Engineering
+  url: https://www.anthropic.com/engineering
+  company: Anthropic
+  region: us
+  quality: A
+  has-rss: false
+  tags: [engineering, agents, claude]
+  comment: agent 工程实践最高质量的官方发声：context engineering、multi-agent 系统复盘、skills 规范
+  must-read:
+    - title: Building Effective Agents
+      url: https://www.anthropic.com/research/building-effective-agents
+    - title: How we built our multi-agent research system
+      url: https://www.anthropic.com/engineering/built-multi-agent-research-system
+  added: 2026-11-23
+
+- name: OpenAI Blog / Research
+  url: https://openai.com/news/
+  company: OpenAI
+  region: us
+  quality: A
+  has-rss: false
+  tags: [research, products, agents]
+  comment: 模型与 agent 产品（Operator/Codex/Agents SDK）第一手发布源
+  must-read:
+    - title: A Practical Guide to Building Agents
+      url: https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
+    - title: OpenAI Cookbook
+      url: https://developers.openai.com/cookbook
+  added: 2026-11-23
+
+- name: Google DeepMind Blog
+  url: https://deepmind.google/discover/blog
+  company: Google
+  region: us
+  quality: A
+  has-rss: false
+  tags: [research, gemini, world-models]
+  comment: 深度研究 + Gemini 生态 + 通用 agent（Astra/Veo/Genie）进展
+  added: 2026-11-23
+
+- name: Google Developers Blog
+  url: https://developers.googleblog.com/
+  rss: https://developers.googleblog.com/feed.xml
+  company: Google
+  region: us
+  quality: B
+  has-rss: true
+  tags: [engineering, protocols, adk]
+  comment: 工程侧发声：A2A 协议、ADK、agentic commerce 工具等重要公告多在此首发
+  added: 2026-11-23
+
+- name: Microsoft Research Blog
+  url: https://www.microsoft.com/en-us/research/blog/
+  rss: https://www.microsoft.com/en-us/research/feed/
+  company: Microsoft
+  region: us
+  quality: B
+  has-rss: true
+  tags: [research, enterprise, agent-framework]
+  comment: 微软研究院博客，AutoGen→Agent Framework 演进与企业 agent 研究重镇
+  added: 2026-11-23
+
+- name: Meta AI Blog
+  url: https://ai.meta.com/blog/
+  company: Meta
+  region: us
+  quality: B
+  has-rss: false
+  tags: [research, open-source, llama]
+  comment: Llama 生态与开放研究，agent 相关多在论文侧
+  added: 2026-11-23
+
+- name: Hugging Face Blog
+  url: https://huggingface.co/blog
+  rss: https://huggingface.co/blog/feed.xml
+  company: Hugging Face
+  region: us
+  quality: B
+  has-rss: true
+  tags: [open-source, smolagents, ecosystem]
+  comment: 开源社区风向标：smolagents、开放模型、agent 评测与排行榜
+  added: 2026-11-23
+
+- name: Mistral AI News
+  url: https://mistral.ai/news
+  company: Mistral
+  region: us
+  quality: C
+  has-rss: false
+  tags: [models, agents]
+  comment: 欧洲模型厂商，agent API 侧偶有亮点
+  added: 2026-11-23
+
+# ---------- 海外 · 框架/工程社区 ----------
+
+- name: LangChain Blog
+  url: https://blog.langchain.ai/
+  rss: https://blog.langchain.ai/rss/
+  region: us
+  quality: B
+  has-rss: true
+  tags: [langgraph, engineering, ecosystem]
+  comment: LangGraph 设计理念与落地案例的官方深度文章
+  added: 2026-11-23
+
+- name: LlamaIndex Blog
+  url: https://www.llamaindex.ai/blog
+  region: us
+  quality: C
+  has-rss: false
+  tags: [rag, workflows, data]
+  comment: RAG/数据侧 agent 工程文章
+  added: 2026-11-23
+
+- name: Lilian Weng Blog
+  url: https://lilianweng.github.io/
+  rss: https://lilianweng.github.io/index.xml
+  region: us
+  quality: A
+  has-rss: true
+  tags: [foundations, survey-quality, must-read]
+  comment: OpenAI 研究员个人博客，agent 理论的「教科书」级长文（Planning/Memory/Tool Use 框架出处）
+  must-read:
+    - title: LLM Powered Autonomous Agents
+      url: https://lilianweng.github.io/posts/2023-06-23-agent/
+  added: 2026-11-23
+
+- name: Simon Willison Blog
+  url: https://simonwillison.net/
+  rss: https://simonwillison.net/atom/everything/
+  region: us
+  quality: A
+  has-rss: true
+  tags: [commentary, tools, prompt-injection]
+  comment: 对 agent 生态每日动态最敏锐的独立评论者，prompt injection 安全议题旗手
+  added: 2026-11-23
+
+- name: Latent Space
+  url: https://www.latent.space/
+  rss: https://www.latent.space/feed
+  region: us
+  quality: B
+  has-rss: true
+  tags: [podcast, newsletter, engineering]
+  comment: AI 工程师社区 newsletter+播客，agent 创业公司与一线工程师访谈质量高
+  added: 2026-11-23
+
+- name: Turing Post
+  url: https://www.turingpost.com/
+  region: us
+  quality: C
+  has-rss: false
+  tags: [newsletter, research-digest]
+  comment: 研究速递型 newsletter，computer-use 等专题梳理不错
+  added: 2026-11-23
+
+# ---------- 国内 ----------
+
+- name: 字节跳动 Seed
+  url: https://seed.bytedance.com/
+  company: 字节跳动
+  region: cn
+  quality: A
+  has-rss: false
+  tags: [research, doubao, models]
+  comment: 字节 Seed 团队技术发声：模型/agent 技术报告与深度文章
+  added: 2026-11-23
+
+- name: 通义千问 Qwen Blog
+  url: https://qwenlm.github.io/blog/
+  company: 阿里
+  region: cn
+  quality: A
+  has-rss: true
+  tags: [models, qwen, open-source]
+  comment: Qwen 系列官方博客，开源模型 + Qwen-Agent 进展第一手
+  added: 2026-11-23
+
+- name: 智谱技术
+  url: https://zai-org.github.io/blog/
+  company: 智谱
+  region: cn
+  quality: B
+  has-rss: true
+  tags: [glm, agents, research]
+  comment: GLM 系列与 AutoGLM agent 研究发布渠道
+  added: 2026-11-23
+
+- name: DeepSeek
+  url: https://api-docs.deepseek.com/news/
+  company: DeepSeek
+  region: cn
+  quality: A
+  has-rss: false
+  tags: [models, open-source, v-series]
+  comment: V/R 系列模型发布与技术报告，性价比 agent 后端首选模型
+  added: 2026-11-23
+
+- name: 月之暗面 Kimi
+  url: https://www.moonshot.cn/
+  company: 月之暗面
+  region: cn
+  quality: B
+  has-rss: false
+  tags: [models, long-context]
+  comment: Kimi 系列发布（长上下文与 agentic 能力演进）
+  added: 2026-11-23
+
+- name: 腾讯混元
+  url: https://hunyuan.tencent.com/
+  company: 腾讯
+  region: cn
+  quality: C
+  has-rss: false
+  tags: [models, open-source]
+  comment: 混元系列开源模型与多模态进展
+  added: 2026-11-23
