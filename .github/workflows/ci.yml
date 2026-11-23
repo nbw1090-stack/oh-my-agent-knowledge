@@ -1,0 +1,62 @@
+# CI 预检：PR 合入 main 前验证站点可构建、数据文件语法正确
+# （main 分支的 push 由 deploy.yml 负责构建并发布）
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate data YAML files
+        run: |
+          node --input-type=module -e "
+          import fs from 'node:fs'
+          import yaml from 'js-yaml'
+          let bad = 0
+          for (const f of fs.readdirSync('data').filter(x => x.endsWith('.yml'))) {
+            try {
+              const d = yaml.load(fs.readFileSync('data/' + f, 'utf8'), { schema: yaml.JSON_SCHEMA })
+              if (!Array.isArray(d)) throw new Error('顶层必须是列表')
+              // events.yml 用 title/desc；其余文件用 name/comment
+              const required = f === 'events.yml' ? ['title', 'date'] : ['name', 'comment']
+              for (const it of d) {
+                for (const k of required) if (!it[k]) throw new Error('条目缺少 ' + k + ' 必填字段: ' + JSON.stringify(it).slice(0, 80))
+              }
+              console.log('OK  ', f, d.length + ' 条')
+            } catch (e) { bad++; console.log('FAIL', f, e.message) }
+          }
+          if (bad) process.exit(1)
+          "
+
+      - name: Build docs site
+        run: npm run docs:build
+
+      - name: Check internal links (sidebar targets exist)
+        run: |
+          node --input-type=module -e "
+          import fs from 'node:fs'
+          const cfg = fs.readFileSync('docs/.vitepress/config.mts', 'utf8')
+          const links = [...cfg.matchAll(/link: '([^']+)'/g)].map(m => m[1]).filter(l => l.startsWith('/'))
+          const missing = links.filter(l => {
+            if (l.endsWith('/')) return !fs.existsSync('docs' + l + 'index.md')
+            return !fs.existsSync('docs' + l + '.md')
+          })
+          if (missing.length) { console.log('sidebar 死链:', missing); process.exit(1) }
+          console.log('sidebar', links.length, '个内部链接全部有效')
+          "
