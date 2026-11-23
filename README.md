@@ -3,7 +3,16 @@
 > Agent 技术知识库：**基础理论 · 前沿方向 · 生态版图 · 企业实践 · 每周动态**
 > 把「收藏链接」变成「沉淀理解」。
 
+## 📖 在线阅读
+
+**[https://nbw1090-stack.github.io/oh-my-agent-knowledge/](https://nbw1090-stack.github.io/oh-my-agent-knowledge/)**
+
+点击上方链接即可在浏览器中阅读全部内容（与仓库内容同步更新，推送后自动部署）。
+
+[![Website](https://img.shields.io/badge/在线阅读-GitHub%20Pages-10a37f?logo=githubpages&logoColor=white)](https://nbw1090-stack.github.io/oh-my-agent-knowledge/)
 [![Deploy Docs](https://github.com/nbw1090-stack/oh-my-agent-knowledge/actions/workflows/deploy.yml/badge.svg)](https://github.com/nbw1090-stack/oh-my-agent-knowledge/actions/workflows/deploy.yml)
+
+> 若链接暂时 404：到仓库 **Settings → Pages → Build and deployment → Source 选择 "GitHub Actions"**，然后到 Actions 页手动触发一次 *Deploy Docs* workflow 即可。
 
 ## 这是什么
 
