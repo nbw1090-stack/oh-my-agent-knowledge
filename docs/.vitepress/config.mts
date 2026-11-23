@@ -1,16 +1,19 @@
 import { defineConfig } from 'vitepress'
 
 const REPO = 'https://github.com/nbw1090-stack/oh-my-agent-knowledge'
+// 站点部署在 GitHub Pages 子路径下，资源引用必须带此前缀
+const BASE = '/oh-my-agent-knowledge/'
 
 export default defineConfig({
   lang: 'zh-CN',
+  base: BASE,
   title: 'Oh My Agent Knowledge',
   description:
     'Agent 技术知识库：基础理论 · 前沿方向 · 生态版图 · 企业实践 · 每周动态',
   lastUpdated: true,
   cleanUrls: true,
 
-  head: [['link', { rel: 'icon', href: '/favicon.svg' }]],
+  head: [['link', { rel: 'icon', href: `${BASE}favicon.svg` }]],
 
   themeConfig: {
     nav: [
